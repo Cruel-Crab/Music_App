@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="./icons/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icons/dvd.png" type="image/x-icon">
+    
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="player">
+            <audio id="music-player" crossorigin="anonymous"></audio>
+            <div id="song-image" class="song-img"></div>
+            <div class="song-details">
+                <h2 id="song-title">Song is On !</h2>
+                <h3 id="song-artist">Mohammed</h3>
+            </div>
+            <div class="player-controls">
+                <button id="prev-btn" class="skip-btn"><i class="fas fa-backward fa-lg"></i></button>
+                <button id="play-btn" class="play-btn"><i id="play-icon" class="fas fa-play fa-2x"></i></button>
+                <button id="next-btn" class="skip-btn"><i class="fas fa-forward fa-lg"></i></button>
+            </div>
+            <div class="next-up">
+                <p>Next Up: <span id="song-next-up">Koi saleeqa by Mohammed</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
