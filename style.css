@@ -36,7 +36,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     transition: 0.4s;
-    background-image: url('./images/song-1.jpg');
+    /*background-image: url('./images/song-1.jpg');*/
 }
 .song-img:after{
     content: '';

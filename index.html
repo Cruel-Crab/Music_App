@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Music App</title>
-    <link rel="stylesheet" href="./icons/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./icons/dvd.png" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="app-wrapper">
-      <div class="player">
+    <link rel="stylesheet" href="./icons/css/all.min.css"/>
+    <link rel="shortcut icon" href="./icons/dvd.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #FF0000;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="loader" class="center"></div>
+<div class="app-wrapper" style="visibility: hidden">
+    <div class="player">
         <audio id="music-player" crossorigin="anonymous"></audio>
         <div id="song-image" class="song-img"></div>
         <div class="song-details">
-          <h2 id="song-title">Song is On !</h2>
-          <h3 id="song-artist">Mohammed</h3>
+            <h2 id="song-title">Song is On !</h2>
+            <h3 id="song-artist">Mohammed</h3>
         </div>
         <div class="player-controls">
-          <button id="prev-btn" class="skip-btn">
-            <i class="fas fa-backward fa-lg"></i>
-          </button>
-          <button id="play-btn" class="play-btn">
-            <i id="play-icon" class="fas fa-play fa-2x"></i>
-          </button>
-          <button id="next-btn" class="skip-btn">
-            <i class="fas fa-forward fa-lg"></i>
-          </button>
+            <button id="prev-btn" class="skip-btn">
+                <i class="fas fa-backward fa-lg"></i>
+            </button>
+            <button id="play-btn" class="play-btn">
+                <i id="play-icon" class="fas fa-play fa-2x"></i>
+            </button>
+            <button id="next-btn" class="skip-btn">
+                <i class="fas fa-forward fa-lg"></i>
+            </button>
         </div>
         <div class="next-up">
-          <p>Next Up: <span id="song-next-up">Koi saleeqa by Mohammed</span></p>
+            <p>Next Up: <span id="song-next-up"></span></p>
         </div>
-      </div>
     </div>
-    <script src="./main.js"></script>
-  </body>
+</div>
+<script src="./main.js"></script>
+</body>
 </html>
